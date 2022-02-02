@@ -1,10 +1,25 @@
 #!/bin/bash 
 
-#This script copies one file from my bash directory to test_dir
+#This script copies files from /home/user/test to /home/user/desktop/test/
 
-touch test
+mkdir ~/test
+mkdir ~/Desktop/test
 
-cp test test_dir
+touch ~/test/test1 
+touch ~/test/test2
+touch ~/test/test3
 
-echo "test has been copied to test_dir"
+cp ~/test/test1 ~/Desktop/test/ 
+echo "test1 has been copied"
+echo "listing directory: ~/Desktop/test/"
+ls ~/Desktop/test/
+
+
+cp ~/test/test1 ~/test/test2 ~/test/test3 ~/Desktop/test/
+echo "test2 test3 has been copied"
+echo "listing directory ~/Desktop/test/"
+ls ~/Desktop/test/
+
+
+
 
