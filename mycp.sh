@@ -5,21 +5,22 @@
 mkdir ~/test
 mkdir ~/Desktop/test
 
-touch ~/test/test1 
-touch ~/test/test2
-touch ~/test/test3
+cd ~/test
+touch test1 test2 test3
 
-cp ~/test/test1 ~/Desktop/test/ 
+cp test1 ~/Desktop/test/ 
 echo "test1 has been copied"
 echo "listing directory: ~/Desktop/test/"
 ls ~/Desktop/test/
 
+cd ~/test
+cp -t ~/Desktop/test/ test2 test3 
 
-cp ~/test/test1 ~/test/test2 ~/test/test3 ~/Desktop/test/
 echo "test2 test3 has been copied"
 echo "listing directory ~/Desktop/test/"
 ls ~/Desktop/test/
 
-
+rm -r ~/Desktop/test
+rm -r ~/test
 
 
