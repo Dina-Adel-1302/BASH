@@ -1,0 +1,35 @@
+Task Day1:
+Activity 1:
+1. Create a script that asks for user name then send a greeting to him.
+2. Create a script called s1 that calls another script s2 where:
+	a. In s1 there is a variable called x, it's value 5
+	b. Try to print the value of x in s2.
+3. Create a script called mycp where:
+	a. It copies a file from directory to another.
+	b. It copies multiple files from directory to another.
+4. Create a script called mycd where it change directory to the given argument directory.
+5. Create a script called myls where it lists the given argument directory.
+6. Create a script to get number from user and add 1 to it and print it.
+7. Design script to print the current logged in user
+8. Design script to print content of file /etc/password
+9. Script to sort content of file /etc/passwd based on the user id
+10. Script to sort content of file /etc/passwd based on user name alphabet
+11. Script to sort all integer input argument from high to low
+
+Activity2:
+Using sed utility
+	1-Display the lines that contain the word “lp” in /etc/passwd file. 
+	2-Display /etc/passwd file except the third line.
+	3-Display /etc/passwd file except the last line.
+	4-Display /etc/passwd file except the lines that contain the word “lp”.
+	5-Substitute all the words that contain “lp” with “mylp” in /etc/passwd file
+
+Using awk utility
+	1-Print full name (comment) of all users in the system.
+	2-Print login, full name (comment) and home directory of all users.(Print each line preceded by a line number)
+	3-Print login, uid and full name (comment) of those uid is greater than 500 
+	4-Print login, uid and full name (comment) of those uid is exactly 500
+	5-Print line from 5 to 15 from /etc/passwd 
+	6-Change lp to mylp
+	7-Print all information about greatest uid. 
+	8-Get the sum of all accounts id's.
