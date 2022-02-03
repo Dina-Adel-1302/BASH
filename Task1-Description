@@ -7,10 +7,10 @@ Activity 1:
 3. Create a script called mycp where:
 	a. It copies a file from directory to another.
 	b. It copies multiple files from directory to another.
-4. Create a script called mycd whereit change directory to the given argument directory.
-5. Create a script calledmylswhere it lists the given argument directory.
+4. Create a script called mycd where it change directory to the given argument directory.
+5. Create a script called myls where it lists the given argument directory.
 6. Create a script to get number from user and add 1 to it and print it.
-7.Design script to print the current logged in user
+7. Design script to print the current logged in user
 8. Design script to print content of file /etc/password
 9. Script to sort content of file /etc/passwd based on the user id
 10. Script to sort content of file /etc/passwd based on user name alphabet
@@ -26,10 +26,10 @@ Using sed utility
 
 Using awk utility
 	1-Print full name (comment) of all users in the system.
-	2-Print login, full name (comment) and home directory of all users.( Print each line 		  preceded by a line number)
+	2-Print login, full name (comment) and home directory of all users.(Print each line preceded by a line number)
 	3-Print login, uid and full name (comment) of those uid is greater than 500 
 	4-Print login, uid and full name (comment) of those uid is exactly 500
 	5-Print line from 5 to 15 from /etc/passwd 
 	6-Change lp to mylp
 	7-Print all information about greatest uid. 
-8-Get the sum of all accou
+	8-Get the sum of all accounts id's.
