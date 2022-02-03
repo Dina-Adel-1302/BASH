@@ -23,5 +23,16 @@ echo "Print line from 5 to 15 from /etc/passwd "
 awk -F : 'NR>=5 && NR<=15 {print NR, $0}'  /etc/passwd
 echo "----------------------------------------------------------"
 
+echo "Change lp to mylp"
+awk ' $0 ~ /lp/ {gsub("lp","mylp"); print $0;}' /etc/passwd
+echo "----------------------------------------------------------"
+
+echo "Print all information about greatest uid."
+awk -F : 'BEGIN {max = 0; line = 0} {if ($3>max) max=$3; if($3==max) line=$0} END {print line}' /etc/passwd
+echo "----------------------------------------------------------"
+
+echo "Get the sum of all accounts id's."
+awk -F : 'BEGIN {sum = 0} {sum=sum+$3} END {print sum}' /etc/passwd 
+echo "----------------------------------------------------------"
 
 
