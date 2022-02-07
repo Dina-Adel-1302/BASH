@@ -1,18 +1,22 @@
 #!/bin/bash
 #Filename: mycase.sh
-
+#library needed to enable regex: shopt -s extglob
 
 #1. Write a script called mycase, using the case utility to checks the type of character entered by a user: 
 #	a. Upper Case. b. Lower Case. c. Number. d. Nothing. 
 
+shopt -s extglob
+
+echo "This script checks the type of a character and a string."
 echo "Please enter any character: "
-read ch
+read -n1 ch 
+printf "\n"
 
 case $ch in
 	([[:lower:]]) echo lowercase letter;;
 	([[:upper:]]) echo uppercase letter;;
-	([0-9]) echo decimal digit;;
-	("") echo nothing is entered;;
+	([[:digit:]]) echo number;;
+	("") echo empty character;; #[[:blank:]] and [[:space:]] are not working
   	(*) echo undefined character;;
 esac
 
@@ -24,36 +28,35 @@ esac
 echo "Please enter any string: "
 read s
 
-
-if [[ $s =~ [A-Z] ]]
-then
-	if [[ $s =~ [a-z] ]]
-	then 	
-		if [[ $s =~ [0-9] ]] 
-		then 
-			echo "mixed string, letters and numbers"
-		else
-			echo "mixed string, lower and upper cases"
-		fi
-	else
-		echo uppercase string
-	fi
-
-elif [[ $s =~ [a-z] ]]
-then 
-	echo lowercase string
-
-elif [[ $s =~ [0-9] ]]
-then
-	echo decimal digits
-
-elif [[ $s = "" ]]
-then
-	echo empty string
-else
-	echo "udefined string"
-fi
-
+case $s in
+	+([[:upper:]])) 	
+		echo "uppercase string"
+		;;
+	+([[:lower:]]))
+		echo "lowercase string"
+		;;
+	+([[:digit:]]))
+		echo "numbers string"
+		;;
+	+([[:upper:]])+([[:lower:]]))
+		echo "mixed string, upper and lower case"
+		;;
+       	+([[:lower:]])+([[:upper:]]))
+		echo "mixed string, lower and upper case"
+		;;
+	+([[:alpha:]])+([[:digit:]]))
+		echo "mixed string, letters and numbers"
+		;;
+	+([[:digit:]])+([[:alpha:]]))
+		echo "mixed string, numbers and letters"
+		;;
+	+("")) #[[:blank:]] does not match the Enter button 
+		echo "empty string"
+		;;
+	*)
+		echo "undefined string"
+		;;
+esac
 
 
 
