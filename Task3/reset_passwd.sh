@@ -52,14 +52,18 @@ read newpasswd
 #id:name:pass:email
 newrecord=`echo $record | awk -F : -v tmp=$newpasswd '{ gsub($3,tmp); print }'`
 
-#print all records except the one equal to the record variable
-awk -F : -v tmp=$record '$0 != tmp {print $0}' db.txt > output.txt 
+#copy all records except the one equal to the record variable
+touch output.txt
+awk -F : -v tmp=$record '$0 != tmp {print $0}' db.txt > output.txt
 
 #append the new record 
-echo $newrecord >> output.txt 
+echo $newrecord >> output.txt
 
 #remove empty lines
 cat output.txt | sed '/^$/d' | tee output.txt >/dev/null
+
+#move data to db.txt
+mv output.txt db.txt
 
 echo "password updated successfully."
 
