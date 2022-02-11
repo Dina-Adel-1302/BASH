@@ -1,7 +1,7 @@
 Task Day 3:
 Activity 4:
 
-1. Write a script called mychmod using for utility to give execute permission to all filesin your home directory.
+1. Write a script called mychmod using for utility to give execute permission to all files in your home directory.
 
 2. Write a script called mybackup using for utility to create a backup of only files in your home directory. 
 
@@ -16,15 +16,14 @@ Challenge 1:
 Create a directory with a name of<yourName>-<currentDate>.
 
 Write a bash script to: 
-	o Createtwenty-five empty (0 KB) files (Hint: Use the touch command).
+	o Create twenty-five empty (0 KB) files (Hint: Use the touch command).
 	o The file names should be
 	   <yourName><number>,<yourName><number+1>,<yourName><number+2> and so on. 
-	o Design the script so that each time you execute it, it creates the next batch of 25 fileswith increasing numbers
-	  starting with thelast or max number that already exists.
-	o Do not hard codethese numbers. You need to generate them using automation.
+	o Design the script so that each time you execute it, it creates the next batch of 25 files with increasing numbers
+	  starting with the last or max number that already exists.
+	o Do not hard code these numbers. You need to generate them using automation.
 
 Test the script. Display along list of the directory and its contentsto validate that the script created the expected files.
-
 
 Challenge 2:
 
